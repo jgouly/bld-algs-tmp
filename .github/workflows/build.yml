@@ -13,7 +13,9 @@ jobs:
       run: cargo install --git https://github.com/jgouly/cube-tools --bin alg-list-gen
     - name: Build pages
       run: |
-        alg-list-gen < corners> tmp.html
+        alg-list-gen < corners > tmp.html
         git add tmp.html
+        git config --global user.name 'Auto Generator'
+        git config --global user.email 'none@none'
         git commit -am "Auto generated $(date)"
         git push HEAD:tmp-auto
