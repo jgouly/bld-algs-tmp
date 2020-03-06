@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Install
       run: cargo install --git https://github.com/jgouly/cube-tools --bin alg-list-gen
     - name: Build pages
