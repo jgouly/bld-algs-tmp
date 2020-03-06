@@ -12,7 +12,8 @@ jobs:
     - name: Install
       run: cargo install --git https://github.com/jgouly/cube-tools --bin alg-list-gen
     - name: Build pages
-      run: alg-list-gen < corners> tmp.html
-      run: git add tmp.html
-      run: git commit -am "Auto generated $(date)"
-      run: git push HEAD:tmp-auto
+      run: |
+        alg-list-gen < corners> tmp.html
+        git add tmp.html
+        git commit -am "Auto generated $(date)"
+        git push HEAD:tmp-auto
