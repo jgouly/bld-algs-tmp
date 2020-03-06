@@ -15,7 +15,7 @@ jobs:
       run: |
         alg-list-gen < corners > tmp.html
         git fetch
-        git checkout tmp-auto
+        git checkout gh-pages
         git add tmp.html
         git config --global user.name 'Auto Generator'
         git config --global user.email 'none@none'
