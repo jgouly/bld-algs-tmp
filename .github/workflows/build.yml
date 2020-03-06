@@ -14,8 +14,9 @@ jobs:
     - name: Build pages
       run: |
         alg-list-gen < corners > tmp.html
+        git checkout tmp-auto
         git add tmp.html
         git config --global user.name 'Auto Generator'
         git config --global user.email 'none@none'
         git commit -am "Auto generated $(date)"
-        git push HEAD:tmp-auto
+        git push
