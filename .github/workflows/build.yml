@@ -21,7 +21,7 @@ jobs:
         mv tmp2.html tmp.html
         git diff --quiet --exit-code && exit
         git add tmp.html
-        git config --global user.name 'Auto Generator'
+        git config --global user.name 'Auto Generated'
         git config --global user.email 'none@none'
         git commit -am "Auto generated $(date)"
         git push
