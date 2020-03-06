@@ -12,4 +12,4 @@ jobs:
     - name: Install
       run: cargo install --git https://github.com/jgouly/cube-tools --bin alg-list-gen
     - name: Run tests
-      run: alg-list-gen < edges.html
+      run: alg-list-gen < corners.html
