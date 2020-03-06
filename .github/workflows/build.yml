@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install
       run: cargo install --git https://github.com/jgouly/cube-tools --bin alg-list-gen
-    - name: Run tests
+    - name: Build pages
       run: alg-list-gen < corners.html
