@@ -19,7 +19,7 @@ jobs:
         git fetch
         git checkout gh-pages
         mv tmp2.html tmp.html
-        git diff || exit
+        git diff --quiet --exit-code && exit
         git add tmp.html
         git config --global user.name 'Auto Generator'
         git config --global user.email 'none@none'
